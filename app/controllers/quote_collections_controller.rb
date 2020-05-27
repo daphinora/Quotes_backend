@@ -10,6 +10,7 @@ class QuoteCollectionsController < ApplicationController
         render json: @quotecollection, except: [:created_at, :updated_at]
     end
 
+    
 
 
 end

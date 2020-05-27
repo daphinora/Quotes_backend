@@ -1,11 +1,11 @@
 class QuotesController < ApplicationController
     # skip_before_action :verify_authenticity_token
 
-    # before_action :find_quote, only: [:show, :update]
+    before_action :find_quote, only: [:show, :update, :destroy]
     
     def index
         quotes = Quote.all
-        render json: quotes, except: [:created_at, :updated_at]
+        render json: @quotes, except: [:created_at, :updated_at]
     end
 
     def show
@@ -23,11 +23,24 @@ class QuotesController < ApplicationController
 
     end
 
+    def update
+        quote.update(
+            text: params[:quote][:text],
+            author: params[:quote][:author]
+        )
+    end
+
+    def destroy
+        quote.destroy
+        render json: {message: "quote deleted"}
+    end
+
+
 
     private
 
         def find_quote
-           @quote = quote.find(params[:id])
+           @quote = Quote.find(params[:id])
         end
 
         def quote_params
