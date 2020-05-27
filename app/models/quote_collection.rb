@@ -1,0 +1,2 @@
+class QuoteCollection < ApplicationRecord
+end
