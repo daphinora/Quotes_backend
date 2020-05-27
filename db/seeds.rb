@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: "Jelena")
+Quote.create(text: " bla bla", author: "Mike Mike", sentiment: "positive")
+QuoteCollection.create(user_id: 1, quote_id: 1)

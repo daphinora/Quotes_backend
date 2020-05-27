@@ -6,7 +6,7 @@ class CreateQuoteCollections < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    # add_index :quote_collections, :user_id
-    # add_index :quote_collections, :quote_id
+    add_index :quote_collections, :user_id
+    add_index :quote_collections, :quote_id
   end
 end
