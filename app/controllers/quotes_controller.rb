@@ -25,9 +25,9 @@ class QuotesController < ApplicationController
 
     def update
         @quote.update(
-            text: params[:quote][:text],
-            author: params[:quote][:author]
+            saved: params[:saved],
         )
+        @quote.save
     end
 
     def destroy
