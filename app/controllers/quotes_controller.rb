@@ -24,14 +24,14 @@ class QuotesController < ApplicationController
     end
 
     def update
-        quote.update(
+        @quote.update(
             text: params[:quote][:text],
             author: params[:quote][:author]
         )
     end
 
     def destroy
-        quote.destroy
+        @quote.destroy
         render json: {message: "quote deleted"}
     end
 

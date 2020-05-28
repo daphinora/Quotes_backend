@@ -4,6 +4,7 @@ class CreateQuotes < ActiveRecord::Migration[6.0]
       t.string :text
       t.string :author
       t.string :sentiment
+      t.boolean :saved
 
       t.timestamps
     end

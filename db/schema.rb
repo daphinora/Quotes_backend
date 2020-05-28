@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_05_27_172215) do
     t.string "text"
     t.string "author"
     t.string "sentiment"
+    t.boolean "saved"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
